@@ -1,0 +1,11 @@
+{
+    "name": "Clearlify",
+    "description": "Use AI to help you understand better what you are reading",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "assets/icon.png"
+    }
+
+}
