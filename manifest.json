@@ -3,18 +3,19 @@
     "description": "Use AI to help you understand better what you are reading",
     "version": "1.0.0",
     "manifest_version": 3,
+    "permissions": ["scripting", "tabs"],
     "action": {
         "default_popup": "index.html",
         "default_icon": "assets/icon.png"
     },
     "content_scripts": [
         {
-            "js": ["scripts/greeting.js"],
-            "matches": [
-                "https://developer.chrome.com/docs/extensions/*",
-                "https://developer.chrome.com/docs/webstore/*",
-                "https://youtube.com/*"
-            ]
+            "js": ["src/scripts/greeting.js"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_idle"
         }
-    ]
+    ],
+    "icons": {
+        "128": "assets/icon.png"
+    }
 }
